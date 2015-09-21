@@ -6,8 +6,15 @@ This game is optimized well for cross platform. It's able to work ios android an
 ## How to use it? 
 ### SlotMachine class .
 
-This class is based node class of cc engine. you can add it to your game scene (layer based )
-It's very simple to use. you can add it using a few code lines.
+This class is based node class of cc engine. So you can use this class using the methods like other node classes on the game scene. (layer based).
+
+        var SlotMachine = cc.Node.extend(
+        {
+                ...
+        }
+
+
+It's very simple to use. You can add it using a few code lines.
 
 for example you can add it using following code.
 
@@ -30,6 +37,7 @@ for example you can add it using following code.
     //            added images on SlotMachineFrame node can not be rendered at outside of that image's boundary .  ex : "mask.png"
     // @param 3 : array of reels. this value must be following format.  type : [{base_image:"x.png", scale:scale, normal_action:action1, stop_action:action2, win_action:action3}, ... ]
     // @param 4 : orders of index of reels per each row. this value must be following format. ex : [[0,1,3,2,2,1,4,6,3,5,], [...] ,[...]]
+    // return : returns a instance of Slotmachine class. 
     
     ex :  var _slotMachine = new SlotMachine("Frame.png","FrameMask.png"); // create a slot machine. you can create more slot machines.
 
