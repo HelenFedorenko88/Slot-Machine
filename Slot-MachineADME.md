@@ -1,7 +1,7 @@
 # Slot-Machine 
 
 It's web based slot machine game made using cocos2d-js.
-This game is optimized well for cross platform. It's able to work ios android and web browsers.
+This game is prepared for cross platform and it's able to work ios android and web browsers.
 
 ## How to use it? 
 ### SlotMachine class .
@@ -14,16 +14,16 @@ This class is based node class of cc engine. So you can use this class using the
         }
 
 
-It's very simple to use. You can add it using a few code lines.
+It's easy to use. You can add it on your game using a few code lines.
 
-for example you can add it using following code.
+for example you can make a slot machine using following lines.
 
         var _slotMachine = new SlotMachine("Frame.png","FrameMask.png"); // create a slot machine. you can create more slot machines.
         var centerPos = cc.p(320, 200); // set position of slot machine.
         _slotMachine.setPosition(centerPos);
         _slotMachine.setScale(0.5); // set scale.
         this.addChild(_slotMachine, 1,1); // add slotmachine object to cc.layer
-        _slotMachine,spin(); // spin the reels in slot machine.
+        _slotMachine.spin(); // spin the reels in slot machine.
         
         
 ### Public Members 
