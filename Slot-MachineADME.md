@@ -1,6 +1,6 @@
 # Slot-Machine 
 
-It's web-based slot machine game made using Web-GL.
+It's web-based slot machine game based on the Web-GL.
 This game is prepared for cross-platform and it's able to work ios android and web browsers.
 
 ## How to use it? 
