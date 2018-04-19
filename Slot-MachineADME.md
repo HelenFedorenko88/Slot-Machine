@@ -1,12 +1,12 @@
 # Slot-Machine 
 
-It's web-based slot machine game based on the Web-GL.
-This game is prepared for cross-platform and it's able to work ios android and web browsers.
+It's a web-based slot machine game based on the Web-GL.
+This is designed as cross-platform game and it's able to run on the ios android and web browsers.
 
 ## How to use it? 
 ### SlotMachine class .
 
-This class is based node class of cc engine. So you can use this class using the way like other node classes on the game scene. (layer based).
+This class is based on node class of cc engine.
 
         var SlotMachine = cc.Node.extend(
         {
@@ -14,26 +14,25 @@ This class is based node class of cc engine. So you can use this class using the
         }
 
 
-It's easy to use. You can add it into your game using a few code lines.
+It's easy to use. You can add it to your game by a few code lines.
 
 For example, you can make a slot machine using following lines.
 
         var _slotMachine = new SlotMachine("Frame.png","FrameMask.png"); // create a slot machine. you can create more slot machines.
-        var centerPos = cc.p(320, 200); // set position of slot machine.
+        var centerPos = cc.p(320, 200); // set position of the slot machine.
         _slotMachine.setPosition(centerPos);
         _slotMachine.setScale(0.5); // set scale.
-        this.addChild(_slotMachine, 1,1); // add slotmachine object to cc.layer
-        _slotMachine.spin(); // spin the reels in slot machine.
+        this.addChild(_slotMachine, 1,1); // add the slotmachine object to the cc.layer
+        _slotMachine.spin(); // spin reels in the slot machine.
         
         
 ### Public Members 
 ####  - Constructor .
-  You have to use following styles to create Slot Machine object.
-  
+      
     SlotMachine (backImage, maskImage, reels, orderOfReels);
     
-    // @param 1 : background image. this image will be laid on final layer of Zorder.  ex : "background.png"
-    // @param 2 : mask image. this image will be laid on top layer of Zorder. this image is very important,
+    // @param 1 : background image. this image will be laid on last layer in the Zorder.  ex : "background.png"
+    // @param 2 : mask image. this image will be laid on top layer in the Zorder. this is very important,
     //            added images on SlotMachineFrame node can not be rendered at outside of that image's boundary .  ex : "mask.png"
     // @param 3 : array of reels. this value must be following format.  type : [{base_image:"x.png", scale:scale, normal_action:action1, stop_action:action2, win_action:action3}, ... ]
     // @param 4 : orders of index of reels per each row. this value must be following format. ex : [[0,1,3,2,2,1,4,6,3,5,], [...] ,[...]]
